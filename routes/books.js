@@ -28,7 +28,8 @@ router.get('/search',
   query('title').isString().optional(),
   query('author').isString().optional(),
   query('isbn').isString().optional(),
-  BooksController.getBook);
+  BooksController.getBook
+);
 
 router.post(
   '/',
@@ -41,5 +42,7 @@ router.put(
   ...bookValidation,
   BooksController.updateBook
 );
+
+router.delete('/:id', BooksController.deleteBook);
 
 export default router;

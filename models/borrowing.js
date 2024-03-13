@@ -10,6 +10,22 @@ const borrowingSchema = {
   borrowTo: {
     type: Sequelize.DATE,
     allowNull: false
+  },
+  bookId: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'books',
+      key: 'id'
+    }
+  },
+  borrowerId: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'borrowers',
+      key: 'id'
+    }
   }
 };
 

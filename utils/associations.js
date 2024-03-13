@@ -1,7 +1,6 @@
 import Book from '../models/book.js';
 import Borrowers from '../models/borrowers.js';
 import Borrowing from '../models/borrowing.js';
-import Shelf from '../models/shelf.js';
 
 /**
  * Relation Between Books and Borrowers
@@ -15,6 +14,10 @@ Borrowing.hasOne(Book, {
   constraints: false
 });
 
-Shelf.hasMany(Borrowing, {
+Borrowers.hasMany(Borrowing, {
+  constraints: false
+});
+
+Book.hasMany(Borrowing, {
   constraints: false
 });
