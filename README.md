@@ -30,3 +30,11 @@
 - Install dependencies : `yarn install`
   - The app will be accessible at ``http://localhost:PORT``
 - Run the project in dev mode : `yarn dev`
+- Run tests : `yarn test`
+- To create the API documentation : `yarn doc`
+
+## Notes
+
+- The documentation for API is at doc
+
+
