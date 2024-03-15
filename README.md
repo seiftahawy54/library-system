@@ -37,4 +37,6 @@
 
 - The documentation for API is at doc
 
+![alt ERD for DB](https://github.com/seiftahawy54/library-system/blob/master/ERD_Image.png?raw=true)
+
 
