@@ -2,7 +2,6 @@ import { Router } from 'express';
 import { body, query } from 'express-validator';
 
 import BorrowersController from '../controllers/borrowers/index.js';
-import BorrowingController from '../controllers/borrowings/index.js';
 
 const router = Router();
 

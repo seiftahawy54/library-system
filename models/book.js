@@ -15,10 +15,13 @@ const bookSchema = {
   quantity: {
     type: Sequelize.INTEGER,
     allowNull: false
+  },
+  shelfLocation: {
+    type: Sequelize.STRING,
+    defaultValue: 'Storage Room'
   }
 };
 
 const Books = sequelize.define('book', bookSchema);
 
-export { Books };
 export default Books;

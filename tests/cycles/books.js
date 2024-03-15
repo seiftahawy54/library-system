@@ -3,12 +3,14 @@ import Book from '../../models/book.js';
 const createBook = async (
   bookTitle,
   bookAuthor,
-  bookIsbn
+  bookIsbn,
+  bookQuantity
 ) => {
   return await Book.create({
     title: bookTitle,
     author: bookAuthor,
-    isbn: bookIsbn
+    isbn: bookIsbn,
+    quantity: bookQuantity
   });
 };
 

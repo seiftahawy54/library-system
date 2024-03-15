@@ -31,5 +31,4 @@ const borrowingSchema = {
 
 const Borrowing = sequelize.define('borrowing', borrowingSchema);
 
-export { Borrowing };
 export default Borrowing;

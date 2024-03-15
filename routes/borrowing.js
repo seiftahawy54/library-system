@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { body } from 'express-validator';
+import { body, query } from 'express-validator';
 
 import BorrowingController from '../controllers/borrowings/index.js';
 
@@ -35,6 +35,24 @@ router.delete('/:id',
 
 router.get('/overdue',
   BorrowingController.getOverdueBooks
+);
+
+router.get('/analytics',
+  query('startDate').isISO8601().withMessage('startDate must be a date'),
+  query('endDate').isISO8601().withMessage('endDate must be a date'),
+  query('exportData').isBoolean().withMessage('exportData must be a boolean'),
+  BorrowingController.getAnalytics
+);
+
+router.put('/:id',
+  ...borrowingActionsValidations,
+  BorrowingController.updateBorrowStatus
+);
+
+router.get('/export',
+  query('startDate').isISO8601().withMessage('startDate must be a date'),
+  query('endDate').isISO8601().withMessage('endDate must be a date'),
+  BorrowingController.exportData
 );
 
 export default router;

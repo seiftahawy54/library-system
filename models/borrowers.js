@@ -14,5 +14,4 @@ const borrowersSchema = {
 
 const Borrowers = sequelize.define('borrower', borrowersSchema);
 
-export { Borrowers };
 export default Borrowers;
