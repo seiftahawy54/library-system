@@ -131,4 +131,4 @@ dist
 
 .idea
 
-public/reports/*
+public/reports/*.xlsx
